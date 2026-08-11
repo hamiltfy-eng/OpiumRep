@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>opium Reporter</title>
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#000;
+    overflow-x:hidden;
+    min-height:100vh;
+}
+
+/* Background Video */
+
+#bg-video{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-3;
+}
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    z-index:-2;
+}
+
+/* Background Decorations */
+
+.bg-shape{
+    position:fixed;
+    color:rgba(255,255,255,.06);
+    font-size:140px;
+    z-index:-1;
+    user-select:none;
+}
+
+.shape1{
+    top:20%;
+    left:5%;
+}
+
+.shape2{
+    top:50%;
+    right:8%;
+}
+
+.shape3{
+    bottom:10%;
+    left:10%;
+}
+
+/* Container */
+
+.container{
+    width:100%;
+    max-width:900px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+/* Glass Card */
+
+.glass-card{
+    position:relative;
+
+    margin-bottom:40px;
+
+    background:rgba(255,255,255,0.05);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    border-radius:40px;
+
+    padding:40px 25px;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,.5),
+    inset 0 0 25px rgba(255,255,255,.03);
+
+    transition:.4s;
+}
+
+/* Glow Effect */
+
+.glass-card::before{
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    background:radial-gradient(
+        circle,
+        rgba(255,255,255,.10),
+        transparent
+    );
+
+    top:-120px;
+    left:-100px;
+
+    filter:blur(30px);
+
+    pointer-events:none;
+}
+
+.glass-card:hover{
+    transform:translateY(-6px);
+}
+
+.card-image{
+    width:260px;
+    height:360px;
+
+    object-fit:cover;
+
+    border-radius:28px;
+
+    margin:auto;
+    display:block;
+
+    margin-bottom:25px;
+}
+
+h1{
+    color:white;
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.info{
+    color:#d9d9d9;
+    font-size:1.3rem;
+    margin-bottom:15px;
+}
+
+ul{
+    list-style:none;
+    color:white;
+    font-size:1.3rem;
+    line-height:2;
+}
+
+.price{
+    color:white;
+    font-size:2.4rem;
+    margin-top:20px;
+    font-weight:bold;
+}
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2.2rem;
+    }
+
+    .card-image{
+        width:180px;
+        height:250px;
+    }
+
+    .info,
+    ul{
+        font-size:1rem;
+    }
+
+    .price{
+        font-size:1.8rem;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- VIDEO -->
+<video autoplay muted loop id="bg-video">
+    <source src="e3.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<!-- Decorations -->
+
+<div class="bg-shape shape1">✦</div>
+<div class="bg-shape shape2">✦</div>
+<div class="bg-shape shape3">✦</div>
+
+<div class="container">
+
+    <!-- CARD 1 -->
+
+    <div class="glass-card">
+
+        <img src="a.jpg" class="card-image">
+
+        <h1>opium</h1>
+
+        <p class="info">
+            Telegram ID : @Akknon
+        </p>
+
+        <p class="info">
+            Telegram Channel and trust : @OpiumRepp
+        </p>
+
+    </div>
+
+    <!-- CARD 2 -->
+
+    <div class="glass-card">
+
+        <img src="b.jpg" class="card-image">
+
+        <h1>Telegram Reporter</h1>
+
+        <ul>
+            <li>✔ Report Channel</li>
+            <li>✔ Report Group</li>
+            <li>✔ Report Account</li>
+            <li>✔ Create The Scam Account</li>
+        </ul>
+
+
+
+    </div>
+
+    <!-- CARD 3 -->
+
+    <div class="glass-card">
+
+        <img src="c.jpg" class="card-image">
+
+        <h1>Support</h1>
+
+        <p class="info">
+            My Account Telegram : @Akknon
+            <p></p>
+            Telegram Channel And Trust : @OpiumRepp
+        </p>
+
+    </div>
+    <div class="glass-card">
+        <h1>Application</h1>
+        <a href="app-release.apk" download
+   style="background:#0078ff;color:white;padding:12px 20px;
+          text-decoration:none;border-radius:8px;">
+   Download The Application
+        </a>
+        
+</div>
+
+</body>
+</html>
